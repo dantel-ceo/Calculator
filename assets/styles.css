@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'Library3';
+  src: url('library-3.otf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  box-sizing: border-box;
+  font-family: Tahoma;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0c0b0c;
+  position: relative;
+}
+
+.calculator_case {
+  width: 310px;
+  height: 538px;
+  border: 1px solid #ffffffdb;
+  background: rgb(144 144 144 / 30%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.calculator_case:before {
+  content: '';
+  width: 20px;
+  height: 300vh;
+  background: #5f5fec;
+  position: absolute;
+  rotate: 45deg;
+  z-index: -1;
+  box-shadow: 0 0 10px 10px #5f5fec;
+}
+
+.calculator_case p {
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  top: 8px;
+  left: -85px;
+  user-select: none;
+}
+
+#display {
+  width: 306px;
+  height: 130px;
+  display: flex;
+  align-items: right;
+  justify-content: center;
+  flex-direction: column;
+}
+#display #upper {
+  width: 100%;
+  height: 40%;
+  text-align: right;
+  display: flex;
+  align-items: right;
+  justify-content: flex-end;
+  flex-direction: column;
+  font-size: 1em;
+  padding-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#display #lower {
+  width: 100%;
+  height: 60%;
+  text-align: right;
+  display: flex;
+  align-items: right;
+  justify-content: flex-start;
+  flex-direction: column;
+  font-size: 3.5em;
+  padding-right: 10px;
+  font-family: 'Library3';
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#sub_grid {
+  width: 306px;
+  height: 40px;
+  margin: 1.3px;
+  user-select: none;
+}
+#sub_grid button {
+  width: 49px;
+  height: 38px;
+  margin: 1px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+#main_grid {
+  width: 308px;
+  height: 360px;
+  user-select: none;
+}
+#main_grid button {
+  margin: 1px;
+  width: 75px;
+  height: 58px;
+  font-size: 18px;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  --webkit-filter: blur(5px);
+  outline: none;
+  border: 0.5px solid #ffffff8f;
+  border-radius: 5px;
+  transition: 500ms ease all;
+}
+
+#main_grid button:hover {
+  background: #ffffff4a;
+}
+
+@media (max-width: 400px) {
+  .calculator_case:before {
+    right: 15%;
+  }
+}
